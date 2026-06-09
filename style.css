@@ -1,0 +1,617 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CORES */
+:root {
+    --green: #365c47;
+    --light-green: #a7c4a0;
+    --orange: #d88c52;
+    --blue: #5b8fa8;
+    --cream: #f8f3ea;
+    --dark: #2b2b2b;
+    --white: #ffffff;
+}
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    background-color: var(--cream);
+    color: var(--dark);
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(54, 92, 71, 0.88);
+    backdrop-filter: blur(14px);
+    z-index: 999;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--cream);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cream);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd6b8;
+}
+
+/* HERO */
+/* FIX: padding-top para compensar a navbar fixa */
+.hero {
+    height: fit-content;
+    overflow: visible;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background:
+        linear-gradient(rgba(32, 56, 44, 0.55),
+            rgba(32, 56, 44, 0.72)),
+        url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* BOTÃO PRINCIPAL */
+.main-button {
+    background: linear-gradient(
+        135deg,
+        var(--orange),
+        #f1a165
+    );
+    border: none;
+    padding: 20px 45px;
+    border-radius: 60px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.main-button:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+/* SEÇÕES */
+.package-section,
+.reasons,
+.interactive-panel {
+    padding: 110px 8%;
+}
+
+.package-section h2,
+.reasons h2,
+.interactive-panel h2 {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    color: var(--green);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 340px;
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+}
+
+.card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.card button {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        var(--green),
+        var(--blue)
+    );
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    transform: scale(1.04);
+}
+
+/* MOTIVO */
+.reasons {
+    background: #eef4ec;
+    border-radius: 50px 50px 0 0;
+}
+
+.reasons p {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+    font-size: 1.15rem;
+}
+
+/* PAINEL */
+.interactive-panel {
+    text-align: center;
+}
+
+.buttons-panel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.buttons-panel button {
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--green)
+    );
+    border: none;
+    padding: 18px 30px;
+    border-radius: 18px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons-panel button:hover {
+    transform: scale(1.06);
+}
+
+/* FOOTER */
+/* FIX: line-height para espaçar as linhas de contato */
+footer {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    line-height: 2;
+}
+
+footer h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* MODAL */
+/* FIX: modal usa classe .open para garantir display:flex correto */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 30px;
+    padding: 40px;
+    position: relative;
+    /* FIX: scroll interno se o conteúdo for grande */
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: fadeIn .3s ease;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    /* FIX: navbar empilhada no mobile sem ocupar tanto espaço */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 5%;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* FIX: hero compensa navbar maior no mobile */
+    .hero {
+        padding-top: 120px;
+        height: auto;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .package-section h2,
+    .reasons h2,
+    .interactive-panel h2 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* FIX: botões do painel em coluna no mobile */
+    .buttons-panel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-panel button {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ================================
+   DRAWER — painel lateral
+   ================================ */
+
+#drawerOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+#drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 480px;
+    height: 100%;
+    background: var(--cream);
+    z-index: 1001;
+    padding: 50px 40px 40px;
+    overflow-y: auto;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 60px rgba(0,0,0,0.2);
+}
+
+#drawer.open {
+    right: 0;
+}
+
+#drawer.open ~ #drawerOverlay,
+#drawerOverlay:has(~ #drawer.open) {
+    display: block;
+}
+
+/* Workaround para mostrar overlay junto com drawer */
+.drawer-open #drawerOverlay {
+    display: block;
+}
+
+#drawerClose {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--green);
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+#drawerBody h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--green);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#drawerBody p {
+    line-height: 1.8;
+    color: var(--dark);
+}
+
+#drawerBody label {
+    display: block;
+    font-weight: 600;
+    margin: 15px 0 6px;
+    color: var(--green);
+}
+
+#drawerBody input,
+#drawerBody textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #d0ddc8;
+    border-radius: 12px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    background: white;
+    color: var(--dark);
+    outline: none;
+    transition: border 0.3s;
+}
+
+#drawerBody input:focus,
+#drawerBody textarea:focus {
+    border-color: var(--green);
+}
+
+#drawerBody textarea {
+    height: 100px;
+    resize: none;
+}
+
+.drawer-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.drawer-btn:hover {
+    transform: scale(1.03);
+}
+
+.contact-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e0ddd6;
+    font-size: 1.05rem;
+}
+
+.date-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #e0ddd6;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge.green {
+    background: #d4edda;
+    color: #2d6a4f;
+}
+
+.badge.orange {
+    background: #fde8d0;
+    color: #b05c1a;
+}
+
+.faq-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #e0ddd6;
+}
+
+.faq-item strong {
+    display: block;
+    color: var(--green);
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+.faq-item p {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    #drawer {
+        max-width: 100%;
+        padding: 50px 24px 30px;
+    }
+}
+
+/* ================================
+   ACCORDION — hero
+   ================================ */
+
+.hero-accordion {
+    max: height 0;;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-accordion.open {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.hero-accordion-inner {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    text-align: left;
+}
+
+/* ================================
+   ACCORDION — cards
+   ================================ */
+
+.card-accordion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.card-accordion.open {
+    max-height: 800px;
+    opacity: 1;
+}
+
+.card-accordion-inner {
+    padding: 25px 30px 30px;
+    border-top: 1px solid #e8e4dc;
+}
+
+.card-accordion-inner img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    max-height: 220px;
+}
+
+.card-accordion-inner p {
+    line-height: 1.8;
+    color: var(--dark);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
